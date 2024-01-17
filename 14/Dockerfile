@@ -1,6 +1,6 @@
-FROM golang:1.17 as build
+FROM golang:1.21 as build
 
-ARG WALG_RELEASE=v1.1
+ARG WALG_RELEASE=v2.0.1
 
 RUN apt-get update -qq && apt-get install -qqy --no-install-recommends --no-install-suggests cmake liblzo2-dev libsodium23 && \
     cd /go/src/ && \
