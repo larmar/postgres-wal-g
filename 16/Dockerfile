@@ -12,7 +12,7 @@ RUN apt-get update -qq && apt-get install -qqy --no-install-recommends --no-inst
     make deps && \
     GOBIN=/go/bin make pg_install
 
-FROM postgres:16
+FROM pgvector/pgvector:pg16-trixie
 LABEL maintainer="Linserv AB <info@linserv.se"
 
 RUN apt-get update  && apt-get install -y \
